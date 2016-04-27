@@ -65,9 +65,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Base\BaseCollection.cs" />
+    <Compile Include="Base\BaseDocument.cs" />
+    <Compile Include="Sample\Client.cs" />
+    <Compile Include="Base\BaseContext.cs" />
+    <Compile Include="Helpers\DocumentHelper.cs" />
+    <Compile Include="Base\DocumentBaseCollection.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Repositories\UserCollection.cs" />
+    <Compile Include="Base\ViewBaseCollection.cs" />
+    <Compile Include="Repositories\ViewUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -80,9 +89,9 @@
     <XamarinComponentReference Include="couchbase-lite-net">
       <Visible>False</Visible>
       <Version>1.2.0.3</Version>
-      <InstallationInProgress>True</InstallationInProgress>
     </XamarinComponentReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Couchbase.Lite.Storage.SystemSQLite.1.2\build\MonoAndroid\Couchbase.Lite.Storage.SystemSQLite.targets" Condition="Exists('..\packages\Couchbase.Lite.Storage.SystemSQLite.1.2\build\MonoAndroid\Couchbase.Lite.Storage.SystemSQLite.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
